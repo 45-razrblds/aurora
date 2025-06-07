@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="aurora is the coolest rss reader ever. we definetely dont steal your data, we just read rss feeds and make them look pretty.">
+    <meta name="keywords" content="rss, reader, aurora, feed, articles, news, web app">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial:300,400,500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>aurora</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">aurora</h1>
+            <div class="settings">
+                <span class="settings-label">theme</span>
+                <div class="toggle-switch" id="themeToggle"></div>
+            </div>
+        </div>
+        
+        <div class="glass-card">
+            <div class="controls">
+                <input type="url" class="url-input" id="rssUrl" placeholder="enter rss feed url..." value="https://avm.de/rss/de-news/rss.xml">
+                <button class="glass-button" id="loadFeed">l o a d</button>
+                <button class="glass-button" id="refreshFeed">r e f r e s h</button>
+            </div>
+            
+            <div class="status" id="status">r e a d y !</div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <div>l o a d i n g ...</div>
+            </div>
+            
+            <div id="errorContainer"></div>
+            
+            <div id="feedContent" style="display: none;">
+                <div class="feed-info">
+                    <h2 class="feed-title" id="feedTitle"></h2>
+                    <p class="feed-description" id="feedDescription"></p>
+                </div>
+                
+                <div class="articles-grid" id="articlesGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
