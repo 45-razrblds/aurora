@@ -159,7 +159,7 @@ class AuroraRSSReader {
             if (!forceRefresh && cachedData && (Date.now() - cachedData.timestamp < this.cacheTimeout)) {
                 feedData = cachedData.data;
                 this.updateStatus('loaded cache from cache (lol)');
-//              this.showError('using cached data, because we are lazy and also it\'s faster so dont complain');
+                this.showError('using cached data, because we are lazy and also it\'s faster so dont complain');
             } else {
                 feedData = await this.fetchFeed(url);
                 this.cache.set(cacheKey, {
